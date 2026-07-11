@@ -1,0 +1,267 @@
+/* Corporate Palette & Design System Tokens */
+:root {
+  --app-bg: #f8fafc;
+  --app-panel: #ffffff;
+  --app-border: rgba(226, 232, 240, 0.7);
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #94a3b8;
+  --accent-base: #0f172a;
+  --accent-hover: #1e293b;
+  --accent-bg-pill: rgba(15, 23, 42, 0.04);
+  --radius-lg: 12px;
+  --radius-md: 8px;
+  --focus-ring: rgba(15, 23, 42, 0.05);
+}
+
+/* Interactive Session Counter Pill */
+.counter {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  color: var(--text-main);
+  background-color: var(--accent-bg-pill);
+  border: 1px solid var(--app-border);
+  transition: all 0.2s ease;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+
+  &:hover {
+    border-color: var(--text-main);
+    background-color: #ffffff;
+  }
+  
+  &:focus-visible {
+    outline: none;
+    border-color: var(--text-main);
+    box-shadow: 0 0 0 3px var(--focus-ring);
+  }
+}
+
+/* System Brand Hero Layout Block */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 0;
+
+  .base,
+  .framework,
+  .vite {
+    inset-inline: 0;
+    margin: 0 auto;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Structural Base Frame Alignment */
+  .base {
+    width: 140px;
+    position: relative;
+    z-index: 10;
+    filter: drop-shadow(0 4px 12px rgba(15, 23, 42, 0.03));
+  }
+
+  .framework,
+  .vite {
+    position: absolute;
+  }
+
+  /* Asymmetric Geometric Node Transformations */
+  .framework {
+    z-index: 20;
+    top: 24px;
+    height: 32px;
+    transform: perspective(1000px) rotateZ(340deg) rotateX(25deg) rotateY(20deg) scale(1.1);
+    opacity: 0.95;
+  }
+
+  .vite {
+    z-index: 5;
+    top: 96px;
+    height: 30px;
+    width: auto;
+    transform: perspective(1000px) rotateZ(20deg) rotateX(30deg) rotateY(-15deg) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+/* Center Operational Hub Panel Layout */
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 4rem 2rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    padding: 2.5rem 1.25rem;
+    gap: 1.125rem;
+  }
+}
+
+/* Modular Next Steps Directory Matrix */
+#next-steps {
+  display: flex;
+  border-top: 1px solid var(--app-border);
+  background-color: var(--app-panel);
+  text-align: left;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+
+  & > div {
+    flex: 1 1 0;
+    padding: 2.5rem;
+    
+    @media (max-width: 1024px) {
+      padding: 1.75rem 1.25rem;
+    }
+  }
+
+  /* Structural Subheading Vector Alignment */
+  h3 {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-main);
+  }
+
+  p {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .icon {
+    margin-bottom: 1rem;
+    width: 20px;
+    height: 20px;
+    color: var(--text-main);
+  }
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+    
+    .icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* Partition Borders for Internal Grid Components */
+#docs {
+  border-right: 1px solid var(--app-border);
+
+  @media (max-width: 1024px) {
+    border-right: none;
+    border-bottom: 1px solid var(--app-border);
+  }
+}
+
+/* Reference Navigation Tool Link Matrices */
+#next-steps ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 0.75rem;
+  margin: 2rem 0 0 0;
+
+  .logo {
+    height: 16px;
+    width: auto;
+  }
+
+  li {
+    display: flex;
+  }
+
+  a {
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border-radius: var(--radius-md);
+    background-color: var(--app-bg);
+    border: 1px solid var(--app-border);
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #ffffff;
+      color: var(--text-main);
+      border-color: var(--text-main);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.02);
+    }
+
+    .button-icon {
+      height: 16px;
+      width: 16px;
+      color: var(--text-secondary);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin-top: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li {
+      flex: 1 1 calc(50% - 0.375rem);
+    }
+
+    a {
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/* Grid Block Layout Isolation Spacers */
+#spacer {
+  height: 5.5rem;
+  border-top: 1px solid var(--app-border);
+  background-color: var(--app-bg);
+  
+  @media (max-width: 1024px) {
+    height: 3rem;
+  }
+}
+
+/* Boundary Anchor Ticks */
+.ticks {
+  position: relative;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    width: 6px;
+    height: 1px;
+    background-color: var(--text-light);
+  }
+
+  &::before {
+    left: 0;
+  }
+  
+  &::after {
+    right: 0;
+  }
+}

@@ -1,0 +1,292 @@
+/* Corporate Palette & System Variables */
+:root {
+  --res-bg: #f8fafc;
+  --res-panel: #ffffff;
+  --res-border: rgba(226, 232, 240, 0.7);
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #94a3b8;
+  --action-dark: #0f172a;
+  --action-hover: #1e293b;
+  --focus-ring: rgba(15, 23, 42, 0.05);
+  --radius-lg: 12px;
+  --radius-md: 8px;
+}
+
+/* Base Viewport Architecture */
+.resume-page {
+  min-height: 100vh;
+  background-color: var(--res-bg);
+  padding: 2rem 1.5rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .resume-page {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.resume-container {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+/* Navigation System Control Row */
+.resume-nav-strip {
+  margin-bottom: 2rem;
+}
+
+.back-control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.back-control-btn:hover {
+  color: var(--text-main);
+}
+
+/* Header Text Blocks */
+.resume-header {
+  border-bottom: 1px solid var(--res-border);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.resume-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.resume-header p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Main Laboratory Asymmetric Grid Split */
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .resume-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* Operational Console Cards */
+.resume-input-card,
+.resume-report-card {
+  background-color: var(--res-panel);
+  border: 1px solid var(--res-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-input-card h3,
+.resume-report-card h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 1.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-main);
+}
+
+/* Standardized Custom Form Inputs */
+.corporate-textarea {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--res-bg);
+  border: 1px solid var(--res-border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-family: inherit;
+  color: var(--text-main);
+  resize: vertical;
+  min-height: 280px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  margin-bottom: 1.25rem;
+}
+
+.corporate-textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* Intermediary Partition Line */
+.structural-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.5rem 0;
+  color: var(--text-light);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.structural-divider::before,
+.structural-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--res-border);
+}
+
+.structural-divider span {
+  padding: 0 0.75rem;
+}
+
+/* Professional Document Drop Box Framework */
+.upload-system-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--res-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  background-color: var(--res-bg);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-input-wrapper:hover {
+  background-color: #ffffff;
+  border-color: var(--text-main);
+}
+
+.file-input-hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-input-label-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.file-selected-indicator {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Action Control Systems */
+.btn-action-execute {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  background-color: var(--action-dark);
+  color: #ffffff;
+  border: 1px solid var(--action-dark);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action-execute:hover:not(:disabled) {
+  background-color: var(--action-hover);
+}
+
+.btn-action-execute:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 2.5rem;
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--res-border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-action-secondary:hover:not(:disabled) {
+  background-color: var(--res-bg);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+/* Terminal Log View Matrix */
+.empty-report-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  border: 1px dashed var(--res-border);
+  border-radius: var(--radius-md);
+  background-color: var(--res-bg);
+  color: var(--text-light);
+  font-size: 0.8125rem;
+  text-align: center;
+}
+
+.monospace-output-box {
+  background-color: var(--res-bg);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+}
+
+.monospace-output-box pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}

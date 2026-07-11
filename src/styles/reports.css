@@ -1,0 +1,271 @@
+/* Corporate Palette & System Variables */
+:root {
+  --rep-bg: #f8fafc;
+  --rep-panel: #ffffff;
+  --rep-border: rgba(226, 232, 240, 0.7);
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #94a3b8;
+  --action-dark: #0f172a;
+  --action-hover: #1e293b;
+  --danger-base: #dc2626;
+  --danger-light: #fee2e2;
+  --radius-lg: 12px;
+  --radius-md: 8px;
+}
+
+/* Base Page Viewport Settings */
+.reports-page {
+  min-height: 100vh;
+  background-color: var(--rep-bg);
+  padding: 2rem 1.5rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .reports-page {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.reports-container {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+/* Layout Top Bar Controllers */
+.reports-nav-strip {
+  margin-bottom: 2rem;
+}
+
+.reports-header {
+  border-bottom: 1px solid var(--rep-border);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.reports-header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.reports-header p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* System Allocations Metric Grid */
+.reports-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .reports-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.reports-stat-card {
+  background-color: var(--rep-panel);
+  border: 1px solid var(--rep-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reports-stat-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.reports-stat-card p {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Categorized Section Structural Partitions */
+.reports-section-wrapper {
+  margin-bottom: 3.5rem;
+}
+
+.section-divider-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--rep-border);
+}
+
+.empty-state-notice {
+  font-size: 0.8125rem;
+  color: var(--text-light);
+  background-color: var(--rep-panel);
+  border: 1px dashed var(--rep-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Individual System Log Cards */
+.report-log-card {
+  background-color: var(--rep-panel);
+  border: 1px solid var(--rep-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .report-log-card {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.report-log-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.report-log-content h4 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.report-log-meta-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background-color: var(--rep-bg);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(226, 232, 240, 0.5);
+}
+
+/* Code Snippet Scroll Fields */
+.monospace-log-block {
+  max-height: 180px;
+  overflow-y: auto;
+  background-color: var(--rep-bg);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+}
+
+.monospace-log-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Group Action Column Systems */
+.report-log-actions-toolbar {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .report-log-actions-toolbar {
+    flex-direction: column;
+    width: auto;
+    align-items: stretch;
+  }
+}
+
+/* Micro Action Buttons */
+.btn-log-action-mail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: 2.25rem;
+  background-color: var(--rep-panel);
+  border: 1px solid var(--rep-border);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.btn-log-action-mail:hover {
+  background-color: var(--rep-bg);
+  color: var(--text-main);
+  border-color: var(--text-main);
+}
+
+.btn-log-action-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  height: 2.25rem;
+  background-color: var(--rep-panel);
+  border: 1px solid var(--rep-border);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0 1rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+}
+
+.btn-log-action-delete:hover {
+  background-color: var(--danger-light);
+  color: var(--danger-base);
+  border-color: #fca5a5;
+}
+
+/* Center Loader Layout Block */
+.reports-loader-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--rep-bg);
+  color: var(--text-secondary);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.reports-loader-container span {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-top: 0.75rem;
+  letter-spacing: 0.02em;
+}

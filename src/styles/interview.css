@@ -1,0 +1,275 @@
+/* Minimalist Corporate Interview Variables */
+:root {
+  --bot-bg: #f8fafc;
+  --bot-panel: #ffffff;
+  --bot-border: rgba(226, 232, 240, 0.7);
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #94a3b8;
+  --action-dark: #0f172a;
+  --action-hover: #1e293b;
+  --focus-ring: rgba(15, 23, 42, 0.05);
+}
+
+/* Page Frame Layout */
+.interview-page {
+  min-height: 100vh;
+  background-color: var(--bot-bg);
+  padding: 2rem 1.5rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .interview-page {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.interview-wrapper {
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+/* Sub Navigation Header Element */
+.nav-strip {
+  margin-bottom: 2rem;
+}
+
+.back-control-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-light);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.back-control-btn:hover {
+  color: var(--text-main);
+}
+
+/* Page Header Structure */
+.interview-header-block {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--bot-border);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.bot-icon-badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 8px;
+  background-color: var(--bot-panel);
+  border: 1px solid var(--bot-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+.header-meta h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.header-meta p {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-top: 0.125rem;
+}
+
+/* Professional Split Workspace Layout Grid */
+.workspace-split-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .workspace-split-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+}
+
+/* Left Column: Question Prompt Display Container */
+.question-prompt-card {
+  background-color: var(--bot-panel);
+  border: 1px solid var(--bot-border);
+  border-radius: 12px;
+  padding: 2rem;
+  position: sticky;
+  top: 2rem;
+}
+
+.step-tracker-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.step-pill {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+}
+
+.audio-trigger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background-color: var(--bot-bg);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  padding: 0.375rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.audio-trigger-btn:hover {
+  background-color: #f1f5f9;
+  color: var(--text-main);
+}
+
+.question-prompt-card h2 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Right Column: Interaction Cards & Workspace */
+.workspace-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.response-entry-card {
+  background-color: var(--bot-panel);
+  border: 1px solid var(--bot-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.response-entry-card h3 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.corporate-textarea {
+  width: 100%;
+  min-height: 220px;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background-color: var(--bot-bg);
+  border: 1px solid var(--bot-border);
+  color: var(--text-main);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  resize: vertical;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.corporate-textarea:focus {
+  outline: none;
+  background-color: #ffffff;
+  border-color: var(--text-main);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.corporate-textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-row-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+/* Clean Corporate Buttons */
+.btn-action-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--action-dark);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--action-dark);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-action-primary:hover:not(:disabled) {
+  background-color: var(--action-hover);
+}
+
+.btn-action-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Assessment Output Audit Panel */
+.assessment-audit-panel {
+  background-color: var(--bot-panel);
+  border: 1px solid var(--bot-border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.audit-banner-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--bot-bg);
+}
+
+.audit-output-pre {
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background-color: var(--bot-bg);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 232, 240, 0.4);
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,222 @@
+/* Minimalist Corporate Light Theme Variables */
+:root {
+  --corporate-bg: #f8fafc;
+  --corporate-card-bg: #ffffff;
+  --corporate-border: rgba(226, 232, 240, 0.6);
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-ghost: #94a3b8;
+  --accent-dark: #0f172a;
+  --accent-hover: #1e293b;
+  --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Page Architecture */
+.analytics-page {
+  min-height: 100vh;
+  background-color: var(--corporate-bg);
+  padding: 2.5rem 1.5rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@media (min-width: 768px) {
+  .analytics-page {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.analytics-wrapper {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navigation & Header */
+.breadcrumb-container {
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-ghost);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.breadcrumb-link:hover {
+  color: var(--text-main);
+}
+
+.header-panel {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--corporate-border);
+  padding-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .header-panel {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.title-group h1 {
+  text-size-adjust: 100%;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .title-group h1 {
+    font-size: 1.875rem;
+  }
+}
+
+.title-group p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Corporate Buttons */
+.btn-primary {
+  inline-size: max-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-dark);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.625rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--accent-dark);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Metric Display Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  .metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .metrics-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.metric-card {
+  background-color: var(--corporate-card-bg);
+  border: 1px solid var(--corporate-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metric-data {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--text-ghost);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.metric-icon-box {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fafc;
+  border: 1px solid #f1f5f9;
+  color: var(--text-muted);
+}
+
+/* Data Visualization Block */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.chart-container-card {
+  background-color: var(--corporate-card-bg);
+  border: 1px solid var(--corporate-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+.chart-header {
+  margin-bottom: 1.5rem;
+}
+
+.chart-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.chart-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-ghost);
+  margin-top: 0.125rem;
+}
